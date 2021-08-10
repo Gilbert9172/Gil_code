@@ -26,7 +26,7 @@ class TreeNode:
 
 class Solution:
     def mergeTrees(self, t1, t2):
-        
+
         if t1 is None:
             return t2
         elif t2 is None:
