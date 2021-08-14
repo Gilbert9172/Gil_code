@@ -17,30 +17,39 @@
 또 생성되는 숫자 : N = N[-1]*10 + N1[-1]
 """
 
+"""
+연산자 정리
+1. + : 더하기
+2. - : 빼기
+3. * : 곱하기
+4. / : 나누기
+5. % : 나머지
+6. // : 몫
+7. ** : 거듭제곱
+"""
+
 N = input()
 n = int(N)
 
 if n < 10:
-    n1 = int(N) * 11
+    N = '0'+N[-1]
 else:
-    n1 = int(N[-1])*10 + int(str(int(N[0])+int(N[-1]))[-1])
+    N = N
 
-count=1
-while n1 != n:
-    n1 = int(str(n1)[-1])*10 + int(str(int(str(n1)[0])+int(str(n1)[-1]))[-1])
+count = 0 
+while True:
+
+    # N의 10의 자리수 
+    n1 = N[0]
+    # N의 1의 자리수
+    n2 = N[-1]
+    # n1 + n2 의 마지막 자리 숫자.
+    n3 = str(int(n1)+int(n2))[-1]
+    
+    N = n2+n3
     count += 1
 
-    if n1 < 10:
-        n1 = n1 * 11
-        count += 1
-        continue
-
-    elif n1 == n:
+    if n == int(N):
+        print(int(N))
         break
-    
-
 print(count)
-
-
-
-
