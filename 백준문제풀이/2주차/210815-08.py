@@ -1,5 +1,4 @@
-# 더하기 사이클 (푸는 중 -> 스터디 때 같이)
-
+# 더하기 사이클 (용량이 너무 크다...)
 """
 99 >= x >= 0 
 
@@ -31,6 +30,7 @@
 N = input()
 n = int(N)
 
+#
 if n < 10:
     N = '0'+N[-1]
 else:
@@ -50,6 +50,6 @@ while True:
     count += 1
 
     if n == int(N):
-        print(int(N))
         break
+
 print(count)
