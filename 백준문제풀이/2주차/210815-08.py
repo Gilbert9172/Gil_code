@@ -30,26 +30,33 @@
 N = input()
 n = int(N)
 
-#
+# n의 범위에 따라 달라지는 N값
+# n이 10보다 작으면 '0x'형태
 if n < 10:
     N = '0'+N[-1]
 else:
     N = N
 
 count = 0 
-while True:
 
+while True:
     # N의 10의 자리수 
     n1 = N[0]
+
     # N의 1의 자리수
     n2 = N[-1]
+
+    # 각 자리숫자의 합.
+    plus = int(n1) + int(n2)
+    
     # n1 + n2 의 마지막 자리 숫자.
-    n3 = str(int(n1)+int(n2))[-1]
+    n3 = str(plus)[-1]
     
     N = n2+n3
     count += 1
 
     if n == int(N):
+        print(int(N))
         break
 
 print(count)
