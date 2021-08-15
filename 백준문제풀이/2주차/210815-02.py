@@ -20,7 +20,7 @@ for i in range(n):
     a, b = map(int, sys.stdin.readline().split())
     plus = a+b
 print(plus)
-
+# 입력
 ## input()대신 sys.stdin.readline()을 사용하는 이유는?
 """
 시간 단축을 위해. 속도순서 (sys.stdin.readline > raw_input() > input())
