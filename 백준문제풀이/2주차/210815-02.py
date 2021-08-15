@@ -19,13 +19,14 @@ n = int(sys.stdin.readline())
 for i in range(n):
     a, b = map(int, sys.stdin.readline().split())
     plus = a+b
-    print(plus)
+print(plus)
 
 ## input()대신 sys.stdin.readline()을 사용하는 이유는?
 """
 시간 단축을 위해. 속도순서 (sys.stdin.readline > raw_input() > input())
 """
 
+"""
 ### 한 라인만 입력 받을 때
 num = int(sys.stdin.readline()) 
 
@@ -35,3 +36,4 @@ num = int(sys.stdin.readlines())
 ### 여러 라인 입력 받을 경우
 n = input()
 a = [sys.stdin.readline() for i in range(n)]
+"""
