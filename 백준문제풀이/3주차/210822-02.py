@@ -15,11 +15,6 @@
 이 주어지면, 이들 중 최댓값은 85이고, 이 값은 8번째 수이다.
 """
 
-
-# lst=[]
-# for i in range(9):
-#     data = int(sys.stdin.readline())
-#     lst.append(data)
 import sys
 
 data = [int(sys.stdin.readline()) for i in range(9)]
