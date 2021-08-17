@@ -18,10 +18,6 @@ X는 문제를 틀린 것이다. 문제를 맞은 경우 그 문제의 점수는
 OX퀴즈의 결과가 주어졌을 때, 점수를 구하는 프로그램을 작성하시오.
 """
 
-# count += 1 을 써야한다.
-# for문? while문?
-# 마지막엔 합을 구해야함.
-
 N = int(input())
 
 for i in range(N):
@@ -30,9 +26,11 @@ for i in range(N):
 
     num = [i for i in data if len(i)>0]
 
-    lst = []
+    gil = []
     for i in range(len(num)):
+        lst = []
         for j in range(len(num[i])):
             lst.append(j+1)
             sum_list = sum(lst)
-        print(sum_list)
+        gil.append(sum_list)
+    print(sum(gil))
