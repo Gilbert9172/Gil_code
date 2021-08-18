@@ -23,33 +23,19 @@ N = int(input())
 # X를 기준으로 문자열 분리.
 for i in range(N):
     n = input()
+
+    # 'X'를 기준으로 분리.
     data = n.split('X')
 
     # 분리한 분자열 중에 길이가 0보다 큰 것만 리스트로 반환
-    # 예를 들면, ["OO","","O","OOO"] 이라면 
-    # 반환 되는 리스트는 ["OO","O","OOO"]
+    # ex. ["OO","","O","OOO"] => ["OO","O","OOO"]
     num = [i for i in data if len(i)>0]
-
 
     gil = []
     for i in range(len(num)):
         lst = []
-        for j in range(len(num[i])):
-            lst.append(j+1)
+        for j in range(len(num[i])):     # ex) "OO"의 length는 2 => j; 0~1 => j+1; 1~2 
+            lst.append(j+1)              # ex) lst = [[1,2],[1],[1,2,3]]
             sum_list = sum(lst)
-        gil.append(sum_list)
+        gil.append(sum_list)             # ex) gil = [3,1,6]
     print(sum(gil))
-
-"""
-["OO","O","OOO"]의 경우 len(num) = 3
-따라서 i에 들어갈 수 있는 값은 0,1,2
-
-len(num(i))는 ["OO","O","OOO"]에 있는 요소들의 길이.
-"OO"의 경우 len=2 따라서, j에 올수 있는 값은 0,1
-하지만 문제에서 주어진 "OO"은 1+2 임.
-따라서 j에 1을 더해준다. 
-
-그런데 이렇게 하게 되면 lst = []에 들어오는 것은
-[[1,2],[1],[1,2,3]]이다. 따라서 lst안에 있는 각 리스트들의 
-합을 구하면 [3,1,6]. 다시 [3,1,6]을 합한 값인 10을 gil에 append
-"""
