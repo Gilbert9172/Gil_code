@@ -31,7 +31,7 @@ for i in range(1,10001):
         print(i)
 
 
-# 두 번째 코드
+# 두 번째 코드 (각 자리수 더하는 코드가 매우 간결해)
 def d(n):
     n = n + sum([int(i) for i in str(n)])     # 각 자리수 더하기 
     return n
