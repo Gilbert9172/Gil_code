@@ -14,29 +14,9 @@
 입력 : 첫째 줄에 1,000보다 작거나 같은 자연수 N이 주어진다.
 """
 
-# x = 110
-# 1 <= N <= 110
-# 110 보다 작은 수 중에서 한수는??
-
 # 한수 
 # 123 -> 1,2,3 공차가 +1인 한수
 # 1357 -> 1,3,5,7 공차가 +2인 한수
-
-# a = 1357
-
-# b = list(map(int,str(a)))
-
-# print(b)
-
-# lst = []
-# for i in range(len(b)-1):
-#     minus = b[i]-b[i+1]
-#     lst.append(minus)
-
-# print(lst)
-# if len(set(lst))==1:
-#     print(a)
-
 
 import sys
 N = int(sys.stdin.readline())
