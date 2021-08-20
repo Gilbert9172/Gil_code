@@ -24,16 +24,20 @@ N = int(sys.stdin.readline())
 gil = []
 for i in range(1,N+1):
 
+    # 10만의 수는 모두 한수 
     if i < 10:
         gil.append(i)
-        
+
+    # str slicing
     x = list(map(int,str(i)))
 
     lst = []
+    # j+1번째 값과 j번째 값의 차이 
     for j in range(len(x)-1):
-        minus = x[j]-x[j+1]
+        minus = x[j+1] - x[j]
         lst.append(minus)
-        
+    
+    # minus가 모두 같다면 
     if len(set(lst))==1:
         gil.append(i)
 
