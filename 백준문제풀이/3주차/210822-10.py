@@ -18,6 +18,7 @@
 # 123 -> 1,2,3 공차가 +1인 한수
 # 1357 -> 1,3,5,7 공차가 +2인 한수
 
+# 코드 1 
 import sys
 N = int(sys.stdin.readline())
 
@@ -30,6 +31,34 @@ for i in range(1,N+1):
 
     # str slicing
     x = list(map(int,str(i)))
+
+    lst = []
+    # j+1번째 값과 j번째 값의 차이 
+    for j in range(len(x)-1):
+        minus = x[j+1] - x[j]
+        lst.append(minus)
+    
+    # minus가 모두 같다면 
+    if len(set(lst))==1:
+        gil.append(i)
+
+print(len(gil))
+
+# 코드 2 (itertools 사용)
+from itertools import chain
+import sys
+
+N = N = int(sys.stdin.readline())
+
+gil =[]
+for i in range(1,N+1):
+
+    # 10만의 수는 모두 한수 
+    if i < 10:
+        gil.append(i)
+
+    # itertools 사용 -> ['1','2','3']과 같은 형태로 나옴
+    x = list(map(int,chain.from_iterable([str(i)])))
 
     lst = []
     # j+1번째 값과 j번째 값의 차이 
