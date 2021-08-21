@@ -15,6 +15,8 @@
 
 그 다음 서로 다른 값이 몇 개 있는지 출력하는 프로그램을 작성하시오.
 """ 
+
+# 코드
 import sys
 num = [int(sys.stdin.readline())%42 for i in range(10)]
 print(len(set(num)))
