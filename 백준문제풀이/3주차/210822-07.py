@@ -27,7 +27,7 @@ for i in range(C):
     n = data[0]
 
     # 학생들의 총 점수
-    total_score : sum(data[1:])
+    total_score = sum(data[1:])
 
     # 평균
     avg = total_score / n
