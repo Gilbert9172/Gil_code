@@ -43,3 +43,9 @@ for i in range(C):
 
     per = (upper_score/n)*100
     print("{:.3f}%".format(per))
+
+
+"""
+list.pop(n)
+리스트 내 n번째 요소 제거 하기
+"""

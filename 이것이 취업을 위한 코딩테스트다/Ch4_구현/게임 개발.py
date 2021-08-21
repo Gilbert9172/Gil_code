@@ -4,9 +4,6 @@
 풀이 시간 : 40분
 """
 
-# A: 북쪽으로 부터 떨어진 칸의 개수
-# B: 서쪽으로부터 떨어진 칸의 개수  
-
 # 맵의 크기
 n,m = map(int,input().split())
 
@@ -34,14 +31,14 @@ def turn_left():
     global direction
     direction -= 1
     if direction == -1:
-        direction == 3
+        direction = 3
 
 # 시뮬레이션 시작
 count = 1
 turn_time = 0
 while True:
     #왼쪽으로 회전
-    turn_left
+    turn_left()
     nx = x + dx[direction]
     ny = y + dy[direction]
 
