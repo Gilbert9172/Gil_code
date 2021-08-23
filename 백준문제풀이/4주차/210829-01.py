@@ -20,3 +20,6 @@ if m:
     print(ord(N))
 else:
     print('No match')
+
+# 코드 (일반)
+print(ord(input()))
