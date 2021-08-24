@@ -12,7 +12,7 @@
 포함되어 있지 않은 경우에는 -1을 출력하는 프로그램을 작성하시오.
 """
 
-
+# 나의 코드
 eng = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
 
 N = input()
@@ -25,15 +25,29 @@ for i in range(len(eng)):
     else:
         print(-1)
 
-
 # ???의 코드
-import sys
+import string
+i=input()
+for a in list(string.ascii_lowercase):
+	print(i.find(a),end=' ')
 
-word = sys.stdin.readline().rstrip()
+"""
+오늘의 배움1 : import string
 
-ans = []
-for i in range(97, 123):
-    w = chr(i)
-    ans.append(str(word.find(w)))
+[일반적인 문자열 연산](https://docs.python.org/ko/3/library/string.html?highlight=string#module-string)
 
-print (" ".join(ans))
+strin.ascii_letters : ascii_lowercase + ascii_uppercase 
+
+string.ascii_lowecase : 소문자 'abcdefghijklmnopqrstuvwxyz'
+
+strin.ascii_uppercase : 대문자 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+
+오늘의 배움2 : find
+
+find(찾을 문자, 찾기 시작할 위치) ; 없는 문자일 경우 -1을 반환
+
++ startswith(시작하는 문자, 시작할 위치) ; ture , false 반환
+
++ endswith(끝나는 문자,문자열의 시작, 문자열의 끝) ;  ture , false 반환
+
+"""
