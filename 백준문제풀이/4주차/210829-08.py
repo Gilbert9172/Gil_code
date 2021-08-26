@@ -15,7 +15,7 @@
 할머니가 외운 단어가 주어졌을 때, 이 전화를 걸기 위해서 필요한 최소 시간을 구하는 프로그램을 작성하시오.
 """
 
-# GIL_Code (너무 별로다... => 내일 새로운 코드 시도 )
+# gil
 N = list(map(str,input().upper()))
 
 lst =[]
@@ -47,4 +47,17 @@ for i in N:
 
 print(sum(lst))
 
-#
+# 새로운 코드
+# 문자 입력
+N = input().upper()
+
+# 다이얼 문자 나열
+lst = ['ABC','DEF','GHI','JKL','MNO','PQRS','TUV','WXYZ']
+
+count = 0
+for i in range(len(N)):
+    for j in lst:
+        if N[i] in j:
+            num = lst.index(j)+3
+            count += num 
+print(count)
