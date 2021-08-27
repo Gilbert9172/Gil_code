@@ -15,14 +15,14 @@
 N = input().upper()
 
 # 단어의 알파벳 split
-data = set(list(map(str,N)))
+data = set(list(N))
 
 # 입력된 값중에서 가장 많은 알파벳 카운트
 lst = []
 for i in data:
-    cnt = N.count(i)
-    lst.append(cnt)
-
+    letters = N.count(i)
+    lst.append(letters)
+print(lst)
 #  문자 list 와 카운트 list zip
 zipped_list = set(list(zip(lst,data)))
 

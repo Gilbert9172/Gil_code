@@ -27,9 +27,15 @@ for i in range(len(eng)):
 
 # ???의 코드
 import string
-i=input()
+N=input()
 for a in list(string.ascii_lowercase):
-	print(i.find(a),end=' ')
+	print(N.find(a),end=' ')
+
+# ???의 코드
+N=input()
+for i in range(97,122):
+    print(N.find(chr(i)))
+print(N.find(chr(122)))
 
 """
 오늘의 배움1 : import string
