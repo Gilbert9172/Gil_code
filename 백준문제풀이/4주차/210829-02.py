@@ -14,7 +14,6 @@ N = int(input())
 
 for i in range(1):
     data = input()
-
     plus = sum(map(int,data))
 
 print(plus)
