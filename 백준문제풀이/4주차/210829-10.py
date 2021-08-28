@@ -55,7 +55,7 @@ print(group)
 
 
 """
-오늘의 배우점 : sorted(iterable, *, key=None, reverse=False)
+오늘의 배운점 : sorted(iterable, *, key=None, reverse=False)
 """
 # Sorted 연습
 N = 'gilbert'
@@ -88,6 +88,8 @@ print(sorted(money.items(),key=lambda x:x[0]))
 # [('1$', 1200), ('10$', 12000), ('100$', 120000), ('만원', 10000), ('백원', 100), ('오만원', 50000), ('오천원', 5000)]
 print(sorted(money.items(),key=lambda x:x[1]))
 # [('백원', 100), ('1$', 1200), ('오천원', 5000), ('만원', 10000), ('10$', 12000), ('오만원', 50000), ('100$', 120000)]
+print(sorted(money.items(),key=lambda x : (-x[1],x[0]))) # -는 반대를 의미
+# [('100$', 120000), ('오만원', 50000), ('10$', 12000), ('만원', 10000), ('오천원', 5000), ('1$', 1200), ('백원', 100)]
 
 # sorted lambda 연습2 (단어의 길이를 기준으로 정렬)
 lst = ['a','qwerr','ab','qetxbxcaf','abc','sadf11111','asdfg22222222']
