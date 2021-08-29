@@ -16,6 +16,7 @@ N = input().upper()
 
 # 단어의 알파벳 split
 data = set(list(N))
+print(data)
 
 # 입력된 값중에서 가장 많은 알파벳 카운트
 lst = []
@@ -23,8 +24,10 @@ for i in data:
     letters = N.count(i)
     lst.append(letters)
 print(lst)
+
 #  문자 list 와 카운트 list zip
 zipped_list = set(list(zip(lst,data)))
+print(zipped_list)
 
 lst1 = []
 for j in zipped_list:

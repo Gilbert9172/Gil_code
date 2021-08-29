@@ -53,7 +53,7 @@ for i in range(T):
 
 Ex1)
 lst = ['I','am','hungry'] 가 있다고 하면, 
-print("".join(lst))
+print(" ".join(lst))
 >>> 'I am hungry' 
 
 Ex2) 정수를 시간으로 바꾸기

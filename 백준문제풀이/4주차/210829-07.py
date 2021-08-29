@@ -26,7 +26,6 @@ for i in N:
 print(max(lst))
 
 # ???_code
-
 a,b = input().split()
 a = int(a[::-1])
 b = int(b[::-1])
