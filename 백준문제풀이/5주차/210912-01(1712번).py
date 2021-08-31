@@ -14,7 +14,7 @@ try:
         print(int(-1))
     elif C-B > 0:
         print(int(x+1))
-except ZeroDivisionError:
+except ZeroDivisionError:  # C-B == 0 일 경우 ZeroDivisionError에러 발생
     print(int(-1))
 
 # Gil_code_2
