@@ -15,32 +15,32 @@
 # 예제
 """
 2
-6 12 10 -> 6층 / 12개의 객식 / 10번째 손님의 방호수는?
+6 12 10 -> 6층 / 12개의 객실 / 10번째 손님의 방호수는?
 30 50 72
 """
+
+# Gil_Code
 T = int(input())
 
-lst=[]
 for i in range(T):
     H,W,N = map(int,input().split())
 
     count = 1
     while True:
-
-        if H*W < N:
+        if H*W < N:             # 풀방일 경우
             break
-
-        N -= H
-        count += 1
-        # print(N,H,count)
-
-        if N <= H and N != 0:
-            # print(f'{N}0{count}')
+        elif H >= N:            # 엘레베이터 바로 앞 방 ; Y(Y)01호
             print((N*100)+count)
             break
+        else:                   # Y(Y)02호  ~ 
+            N -= H
+            count += 1
+            if N <= H and N != 0:
+                print((N*100)+count)
+                break
 
 
-##
+# ???_Code
 num = int(input())
 
 for i in range(num):
