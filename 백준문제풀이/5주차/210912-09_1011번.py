@@ -5,12 +5,6 @@
 알고리즘 분류 : 수학
 """
 
-# import math
-# for _ in range(int(input())):
-#     x, y = map(int, input().split())
-#     print(math.ceil(2 * math.sqrt(y - x) - 1))
-
-
 t = int(input())
 for i in range(t):
 
@@ -29,3 +23,10 @@ for i in range(t):
         print(num * 2)
     else:
         print((num * 2) + 1)
+
+
+#1. 
+#2. 
+#3. 
+#4. 
+#5. 
