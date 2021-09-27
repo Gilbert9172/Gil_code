@@ -11,9 +11,24 @@ def test(lst):
                 ans = lst[i]+lst[j]+lst[k]
                 if ans <= m:
                     array.append(ans)
-    return array
+    return max(array)
 
 # 출력
 n,m = map(int,input().split())
 lst = list(map(int,input().split()))
 print(test(lst))
+
+
+## itertools 사용 
+
+# from itertools import combinations # n길이 만큼의 튜플을 리스트로 반환 / [(a,b),(a,b),(a,b)]
+
+# k,m = map(int,input().split())
+# n = list(map(int,input().split()))
+
+# lst = list(combinations(n,3))
+
+# array = [sum(lst[i]) for i in range(len(lst)) if sum(lst[i])<=m]
+
+
+# print(max(array))
